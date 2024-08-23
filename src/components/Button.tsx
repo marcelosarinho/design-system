@@ -1,7 +1,15 @@
-export default function Button() {
+type ButtonProps = {
+  variant: string;
+  text: string;
+}
+
+export function Button({variant, text}: ButtonProps) {
   return (
-    <button type="button" className="bg-red-500 text-white px-2 py-1 rounded">
-      Texto do botão
+    <button
+      type="button"
+      className={`bg-${variant}`}
+    >
+      {text}
     </button>
   )
 }
